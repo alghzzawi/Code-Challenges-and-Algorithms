@@ -42,23 +42,21 @@ class LinkedList:
             self.nodes.append(node.value)
         
     def delete (self, node):
+        print(node.next)
+        
         if self.head is None:
             return
-        elif self.head.value is node:
-            self.head = self.head.next
-            self.nodes.remove(node)
+        
+        elif node.next is None:
             return
 
-        current = self.head
-        while current.next.value is not node:
-            current = current.next
-            if current.next is None:
-                raise Exception(f"this Node {node.value} Not in the list")
+        else:
+            next_node = node.next
 
-        delete_node = current.next
-        current.next = delete_node.next
-        self.nodes.remove(node)
-    
+            node.value = next_node.value
+
+            node.next = next_node.next
+
     def printAll(self):
 
         if self.head is None:
@@ -89,7 +87,6 @@ linkedList1.append(node3)
 node4 = Node(4)
 linkedList1.append(node4)
 
-
-linkedList1.delete(1000)
+linkedList1.delete(node4)
 linkedList1.printAll()
 

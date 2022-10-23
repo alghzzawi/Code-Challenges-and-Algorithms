@@ -1,1 +1,1 @@
-<img alt="" src="./whiteboard.png" style="width: 140vh; height: 90vh;">
+<img alt="" src="./Whiteboard.png" style="width: 140vh; height: 90vh;">
