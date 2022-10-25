@@ -42,15 +42,13 @@ class LinkedList:
             self.nodes.append(node.value)
         
     def delete (self, node):
-        print(node.next)
         
-        if self.head is None:
-            return
-        
-        elif node.next is None:
+
+        if node.next is None:
             return
 
         else:
+            self.nodes.remove(node.value)
             next_node = node.next
 
             node.value = next_node.value
@@ -58,6 +56,7 @@ class LinkedList:
             node.next = next_node.next
 
             next_node.next = None
+            
 
     def printAll(self):
 
@@ -75,20 +74,22 @@ class LinkedList:
 
 
 
+if __name__ == "__main__":
 
-linkedList1 = LinkedList()
-node1 = Node(5)
-linkedList1.append(node1)
+    linkedList1 = LinkedList()
+    node1 = Node(5)
+    linkedList1.append(node1)
 
-node2 = Node(8)
-linkedList1.append(node2)
+    node2 = Node(8)
+    linkedList1.append(node2)
 
-node3 = Node(2)
-linkedList1.append(node3)
+    node3 = Node(10)
+    linkedList1.append(node3)
 
-node4 = Node(4)
-linkedList1.append(node4)
+    node4 = Node(4)
+    linkedList1.append(node4)
 
-linkedList1.delete(node3)
-linkedList1.printAll()
+    linkedList1.delete(node1)
+    linkedList1.printAll()
 
+    print(linkedList1.nodes)
