@@ -57,6 +57,8 @@ class LinkedList:
 
             node.next = next_node.next
 
+            next_node.next = None
+
     def printAll(self):
 
         if self.head is None:
@@ -87,6 +89,6 @@ linkedList1.append(node3)
 node4 = Node(4)
 linkedList1.append(node4)
 
-linkedList1.delete(node4)
+linkedList1.delete(node3)
 linkedList1.printAll()
 
