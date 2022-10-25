@@ -43,10 +43,8 @@ class LinkedList:
         
     def delete (self, node):
         
-        if self.head is None:
-            return
-        
-        elif node.next is None:
+
+        if node.next is None:
             return
 
         else:
