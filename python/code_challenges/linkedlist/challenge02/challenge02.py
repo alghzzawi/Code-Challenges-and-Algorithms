@@ -6,12 +6,10 @@ class Node:
         self.value = value
         self.next = None
         Node.instance_caunt+=1
-
 class LinkedList:
-    
+    Node.instance_caunt=0
     def __init__(self):
         self.head = None
-        Node.instance_caunt=0
 
     def append (self, node):
         
@@ -34,18 +32,21 @@ class LinkedList:
             current.next = node
 
     def middle_node(self):
-
-        current = self.head
-        count = 0
-        mid_node=int(Node.instance_caunt/2)
+# []->[]->[]->[]->None
+# ->  ->  ->  ->
+# []->[]->[]->None
+# ->  ->  ->  ->
         if self.head is None:
-            raise Exception("The linked list is empty")
-        
-        while mid_node != count:
-            current = current.next
-            count+=1
+            return
+        fast = self.head
+        slow = self.head
 
-        return current.value
+        while fast is not None:
+            fast = fast.next
+            if fast is not None:
+                fast = fast.next
+                slow = slow.next
+        return slow.value
         
     def printAll(self):
 
