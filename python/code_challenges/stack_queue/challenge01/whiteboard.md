@@ -1,0 +1,1 @@
+<img src='./stack_queue_challenge01_whiteboard.png'>
