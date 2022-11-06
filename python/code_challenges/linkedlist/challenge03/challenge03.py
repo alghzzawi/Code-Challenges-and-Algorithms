@@ -6,6 +6,7 @@ import numbers
 class Node:
     instance_caunt=0
     def __init__(self,value):
+        '''this constructor to create Node'''
         self.value = value
         self.next = None
         Node.instance_caunt+=1
@@ -13,9 +14,11 @@ class Node:
 class LinkedList:
     Node.instance_caunt=0
     def __init__(self):
+        '''this constructor to create linked list'''
         self.head = None
         self.nodes=[]
     def append (self, node):
+        '''this function to add node in linked list'''
         
         if self.head is None:
             self.head = node  
@@ -37,6 +40,7 @@ class LinkedList:
         self.nodes.append(node.value)
         
     def delete (self, node):
+        '''this function delete node in linked list'''
         self.nodes.remove(node)
         if self.head is None:
             return
@@ -52,7 +56,7 @@ class LinkedList:
         current.next = delete_node.next
     
     def printAll(self):
-
+        '''this function print the value in linked list'''
         if self.head is None:
             raise Exception("The linked list is empty")
 
@@ -63,6 +67,7 @@ class LinkedList:
                 current = current.next
 
     def remove_nth_end (self, nth_node):
+        '''this function delete node from end of list based the nth number'''
         current = self.head
         number_node = 0
         
