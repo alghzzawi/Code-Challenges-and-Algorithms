@@ -2,17 +2,20 @@
 
 class Node:
     def __init__(self, value):
+        '''this constractor create node'''
         self.value = value
         self.next = None
 
 class Stack:
     def __init__(self):
+        '''this constractor create stack'''
         self.top = None
         self.size = 0
         self.open_bracket={")" : "(", "]" : "[", "}" : "{"}
 
     
     def push(self, symbol):
+        '''this function create new node and push it to stack'''
         node = Node(symbol)
         if self.top:
             node.next = self.top
@@ -20,6 +23,7 @@ class Stack:
         self.size += 1
     
     def pop(self):
+        '''this function pop/remove the last node that pushed in stack '''
         if self.top:
             temp = self.top
             self.top = self.top.next
@@ -30,9 +34,11 @@ class Stack:
             return("This stack is empty")
 
     def empty(self):
+        '''this function check if stack is empty or not empty'''
         return self.size == 0
 
     def peek(self):
+        '''this function return the last value in stack'''
         if self.top:
             return self.top.value
         else:
@@ -40,7 +46,7 @@ class Stack:
     
 
 def check_symbol(stack):
-
+    '''this function check if each open bracket have close bracket with same type'''
     stack_open_bracket=[]
     all_bracket=''
     while not stack.empty():

@@ -3,9 +3,9 @@ import pytest
 from challenge02 import Stack,check_symbol
 
 
-@pytest.mark.skip("todo")
-def test_open_close_bracket_stack():
 
+def test_open_close_bracket_stack():
+    
     stack1 = Stack()
 
     stack1.push(')')
@@ -17,7 +17,7 @@ def test_open_close_bracket_stack():
 
 
 
-@pytest.mark.skip("todo")
+
 def test_open_close_all_bracket_stack():
 
     stack1 = Stack()
@@ -34,7 +34,7 @@ def test_open_close_all_bracket_stack():
     assert actual == expected
 
 
-@pytest.mark.skip("todo")
+
 def test_open_without_close_all_bracket_stack():
     stack1 = Stack()
     
@@ -49,7 +49,7 @@ def test_open_without_close_all_bracket_stack():
     assert actual == expected
 
 
-@pytest.mark.skip("todo")
+
 def test_open_close_all_bracket_stack_add_word():
 
     stack1 = Stack()
@@ -67,7 +67,7 @@ def test_open_close_all_bracket_stack_add_word():
     assert actual == expected
 
 
-@pytest.mark.skip("todo")
+
 def test_open_and_close_all_bracket_stack():
     stack1 = Stack()
 
