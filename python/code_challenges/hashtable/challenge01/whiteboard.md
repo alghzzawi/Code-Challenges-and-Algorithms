@@ -1,0 +1,1 @@
+<img src='challenge01-whiteboard-HashTable.png'/>
