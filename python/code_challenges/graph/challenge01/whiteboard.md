@@ -1,0 +1,1 @@
+<img src='whiteboard-challenge01-graph.png'/>
